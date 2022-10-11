@@ -67,7 +67,7 @@ const handleChange = (e) => {
 
     {
 
-        weather.data != undefined ?
+        weather.data !== undefined ?
 
         <div>
             <DisplayWeather data={weather.data} />
