@@ -50,7 +50,7 @@ const handleChange = (e) => {
             <button className="getweather" onClick={(e) => weatherData(e)}>Submit</button>
         </form>
 
-    {weather.data != undefined ? (
+    {weather.data != null ? (
         <div>
             <DisplayWeather data={weather.data} />
         </div>
