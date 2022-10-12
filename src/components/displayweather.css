@@ -83,3 +83,97 @@ td {
 .displayweather .weatherdetails span {
   font-size: auto;
 }
+
+
+@media all and (min-width: 768px) {
+
+  .displayweather {
+      margin-top: 20px;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  
+    .displayweather .maincard {
+      width: auto;
+      margin-top: 20px;
+      align-self: center; 
+      padding: 10px;
+      border-radius: 20px;
+      position: relative;
+      background: rgb(245, 242, 242);
+      border: 1px solid black;
+    }
+  
+    .displayweather .maincard .cardtitle {
+      position: absolute;
+      top: 10px;
+    left: 10px;
+    font-size: 1rem; 
+    }
+  
+    .displayweather .maincard .cardsubtitle {
+      position: absolute; 
+       left: 10px; 
+  
+      color: grey;
+       margin-top: -8px;
+    }
+  
+    .displayweather h1 {
+      font-size: 2rem;
+      margin: -10px;
+    margin-left: -150px; 
+    }
+  
+    .displayweather .weather-icon {
+      width: 75px;
+      position: absolute; 
+      top: 50px;
+    }
+  
+    .displayweather .weather-main {
+      position: absolute; 
+  
+    top: 120px;
+    left: 310px;
+    font-weight: 500;
+    font-size: auto;
+    }
+  
+    .displayweather .weather-description {
+      position: absolute; 
+      left: 10px; 
+      font-size: auto;
+    }
+  
+    .displayweather .weatherdetails {
+    margin-left: 50px;
+    margin-right: 50px;
+  
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 20px; 
+    }
+  
+    .displayweather .weatherdetails .section1 {
+    justify-self: right;
+    width: 300px; 
+    }
+  
+    h4 {
+      text-align: left;
+      margin-right: 30px;
+      font-size: small;
+    }
+  
+    td {
+      border-bottom: 2px dashed grey;
+    }
+  
+    .displayweather .weatherdetails span {
+      font-size: auto;
+    }
+
+
+}
