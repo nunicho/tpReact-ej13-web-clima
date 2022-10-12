@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import DisplayWeather from './DisplayWeather';
 import './weather.css'
+import Spinner from './Spinner';
 
  function Weather() {
 const [weather, setWeather] = useState([]);
@@ -9,6 +10,7 @@ const [form, setForm] = useState({
     country:""
 
 });
+ const [mostrarSpinner, setMostrarSpinner] = useState(false)
 
 const APIKEY = "79b26ce8648741ed82a5a6d5cbd5af63";
 
@@ -17,13 +19,14 @@ async function weatherData(e){
     if(form.city === ""){
         alert("Add values");
     }else{
-        const data = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&lang=es&appid=${APIKEY}`)
+    setMostrarSpinner(true);
+    const data = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&lang=es&appid=${APIKEY}`)
     .then((res) => res.json())
-    .then (data => data);
-
+    .then (data =>data);
+    setMostrarSpinner(false);
     setWeather({data : data});
+     }
     }
-}
 
 const handleChange = (e) => {
     let name = e.target.name;
@@ -38,6 +41,8 @@ const handleChange = (e) => {
 
     }
 };
+
+const mostrarComponente = (mostrarSpinner === true) ? (<Spinner></Spinner>):(<DisplayWeather data={weather.data} />)
 
   return (
     <div className="weather container">
@@ -54,7 +59,7 @@ const handleChange = (e) => {
 
     {weather.data != null ? (
         <div>
-            <DisplayWeather data={weather.data} />
+            {mostrarComponente}
         </div>
        ) : null}
     </div>
