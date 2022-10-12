@@ -13,12 +13,15 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
   { data.cod != 404 ? (
         <React.Fragment>
             <div className="maincard">
-                    <span className="cardtitle">
-                        {data.name}, {data.sys.country}. Información del Clima
-                    </span>
-                    <span className="cardsubtitle">
+                    <p className="cardtitle">
+                        {data.name}, {data.sys.country}. 
+                    </p>
+                    <p>
+                        Información del Clima
+                    </p>
+                    <p className="cardsubtitle">
                         As of {new Date().toLocaleTimeString()}
-                    </span>
+                    </p>
                     <h1>{Math.floor(data.main.temp - 273.15)}
                     <sup>o</sup>
                     </h1>

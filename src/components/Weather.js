@@ -40,13 +40,15 @@ const handleChange = (e) => {
 };
 
   return (
-    <div className="weather">
+    <div className="weather container">
         <span className="title">App del clima</span>
         <br/>
         <form>
+            <div>
             <input type="text" name="city" placeholder="Ciudad" onChange={e => handleChange(e)}></input>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="country" placeholder="País" onChange={e => handleChange(e)}></input>
+            </div>
             <button className="getweather" onClick={(e) => weatherData(e)}>Buscar</button>
         </form>
 
