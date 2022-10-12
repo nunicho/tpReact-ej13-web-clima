@@ -36,7 +36,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         <tbody>
                         <tr>
                             <td>
-                                <h4>High/Low</h4>
+                                <h4>Máxima/Mínima</h4>
                             </td>
                             <td>
                                 <span>
@@ -47,7 +47,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         </tr>
                                         <tr>
                             <td>
-                                <h4>Humidity</h4>
+                                <h4>Humedad</h4>
                             </td>
                             <td>
                                 <span>
@@ -57,7 +57,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         </tr>
                         <tr>
                             <td>
-                                <h4>Pressure</h4>
+                                <h4>Presión</h4>
                             </td>
                             <td>
                                 <span>
@@ -67,7 +67,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         </tr>
                         <tr>
                             <td>
-                                <h4>Visibility</h4>
+                                <h4>Visibilidad</h4>
                             </td>
                             <td>
                                 <span>
@@ -84,7 +84,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         <tbody>
                         <tr>
                             <td>
-                                <h4>Wind</h4>
+                                <h4>Viento</h4>
                             </td>
                             <td>
                                 <span>
@@ -94,7 +94,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         </tr>
                                         <tr>
                             <td>
-                                <h4>Wind Direction</h4>
+                                <h4>Dirección del viento</h4>
                             </td>
                             <td>
                                 <span>
@@ -104,21 +104,21 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
                         </tr>
                         <tr>
                             <td>
-                                <h4>Sunrise</h4>
+                                <h4>Hora del amanecer</h4>
                             </td>
                             <td>
                                 <span>
-                                    {new Date(data.sys.sunrise*1000).toLocaleTimeString()} Km
+                                    {new Date(data.sys.sunrise*1000).toLocaleTimeString()}
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h4>Sunset</h4>
+                                <h4>Hora del ocaso</h4>
                             </td>
                             <td>
                                 <span>
-                                    {new Date(data.sys.sunset*1000).toLocaleTimeString()} Km
+                                    {new Date(data.sys.sunset*1000).toLocaleTimeString()}
                                 </span>
                             </td>
                         </tr>
