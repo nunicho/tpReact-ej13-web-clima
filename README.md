@@ -22,6 +22,10 @@ npm install sweetalert2-react
 import SweetAlert from 'sweetalert2-react';
 
 
+## API 
+
+https://openweathermap.org/
+
 ## Contenido externo utilizado
 Spinner
 https://tobiasahlin.com/spinkit/
