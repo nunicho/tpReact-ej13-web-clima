@@ -4,13 +4,13 @@ import './displayweather.css'
 function DisplayWeather(props) {
     const {data} = props;
     
-const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weather[0].icon : null}.png`
+const iconurl = `http://openweathermap.org/img/wn/${data.cod !== "404" ? data.weather[0].icon : null}.png`
 
 // const iconurl = "http://openweathermap.org/img/wn/"+`${data.weather[0].icon}`+".png"
 
   return (
     <div className="displayweather">
-  { data.cod != 404 ? (
+  { data.cod !== "404" ? (
         <React.Fragment>
             <div className="maincard">
                     <p className="cardtitle">
@@ -135,7 +135,8 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weath
 
         </React.Fragment>
     ) : ( <div className = "maincard">
-        <h2>{data.message}</h2>
+        <h2>Ciudad no encontrada</h2>
+        {/* <h2>{data.message}</h2> */}
         </div>
 
      )}
