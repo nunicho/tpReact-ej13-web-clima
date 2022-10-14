@@ -20,7 +20,7 @@ const iconurl = `http://openweathermap.org/img/wn/${data.cod !== "404" ? data.we
                         Información del Clima
                     </p>
                     <p className="cardsubtitle">
-                        As of {new Date().toLocaleTimeString()}
+                        Al día {new Date().toLocaleTimeString()}
                     </p>
                     <h1>{Math.floor(data.main.temp - 273.15)}
                     <sup>o</sup>
